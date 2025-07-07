@@ -69,12 +69,12 @@ h1 {
   letter-spacing: .04em;
   color: #fff;
   text-shadow:
-    0 0 8px   #fff,
-    0 0 20px  #fff,
-    0 0 40px  #ff00ff,
-    0 0 80px  #ff00ff,
-    0 0 120px #ff00ff,
-    0 0 160px #ff00ff;
+    0 0 5px #fff,
+    0 0 15px #fff,
+    0 0 30px #ff00ff,
+    0 0 60px #ff00ff,
+    0 0 90px #ff00ff,
+    0 0 120px #ff00ff;
   mix-blend-mode: screen;
   transform: translateY(10px) skewX(-5deg);
 }
