@@ -1,32 +1,90 @@
-body {
-  margin: 0;
-  background: #96e0cb;
-  color: #ffffff;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
+:root {
+  --bg-dark: #111114;
+  --grid-dark: #2d247b;
+  --grid-light: #603bc6;
+  --glow-pink: #c168e9;
+  --glow-white: #f9f2fb;
 }
 
-main {
-  padding: 1rem;
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--bg-dark);
+  color: var(--glow-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Satisfy', cursive;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 38px,
+      var(--grid-dark) 38px 40px),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 38px,
+      var(--grid-dark) 38px 40px),
+    radial-gradient(circle at 50% 120%, #000000 0%, var(--bg-dark) 70%);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNCI+PHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iMiIgc3R5bGU9ImZpbGw6I2ZmZjtvcGFjaXR5LjI7Ii8+PHJlY3QgeD0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgc3R5bGU9ImZpbGw6I2ZmZjtvcGFjaXR5LjI7Ii8+PC9zdmc+");
+  background-size: 6px;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.scene {
+  position: relative;
+  z-index: 2;
+  transform: skewY(-4deg);
+}
+
+.triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 480px;
+  height: 380px;
+  transform: translate(-50%, -55%) rotate(-4deg);
+  clip-path: polygon(3% 10%, 97% 0, 90% 95%, 5% 100%);
+  background: #000;
+  box-shadow:
+    0 0 40px 10px var(--glow-pink),
+    0 0 90px 45px var(--glow-pink);
 }
 
 h1 {
-  font-size: 3em;
-  font-weight: 300;
+  position: relative;
+  font-size: 5rem;
+  font-weight: 400;
   margin: 0;
+  line-height: 1;
   text-transform: lowercase;
-}
-
-p {
-  font-size: 1.2em;
-  font-weight: 200;
-  margin-top: 0.5em;
-  letter-spacing: 1.5px;
-  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 15px #fff,
+    0 0 30px #ff00ff,
+    0 0 60px #ff00ff,
+    0 0 90px #ff00ff,
+    0 0 120px #ff00ff;
+  mix-blend-mode: screen;
+  transform: translateY(10px) skewX(-5deg);
 }
