@@ -23,18 +23,11 @@ body::before {
   position: absolute;
   inset: 0;
   background:
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 38px,
-      var(--grid-dark) 38px 40px),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 38px,
-      var(--grid-dark) 38px 40px),
-    radial-gradient(circle at 50% 120%, #000000 0%, var(--bg-dark) 70%);
+    repeating-linear-gradient(0deg, transparent 0 38px, var(--grid-dark) 38px 40px),
+    repeating-linear-gradient(90deg, transparent 0 38px, var(--grid-dark) 38px 40px),
+    radial-gradient(circle at 50% 120%, #000 0%, var(--bg-dark) 70%);
   mix-blend-mode: screen;
-  opacity: 0.55;
-  pointer-events: none;
+  opacity: .55;
   z-index: 1;
 }
 
@@ -45,7 +38,6 @@ body::after {
   background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNCI+PHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iMiIgc3R5bGU9ImZpbGw6I2ZmZjtvcGFjaXR5LjI7Ii8+PHJlY3QgeD0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgc3R5bGU9ImZpbGw6I2ZmZjtvcGFjaXR5LjI7Ii8+PC9zdmc+");
   background-size: 6px;
   mix-blend-mode: soft-light;
-  pointer-events: none;
   z-index: 3;
 }
 
@@ -72,19 +64,17 @@ body::after {
 h1 {
   position: relative;
   font-size: 5rem;
-  font-weight: 400;
   margin: 0;
-  line-height: 1;
   text-transform: lowercase;
-  letter-spacing: 0.04em;
-  color: #ffffff;
+  letter-spacing: .04em;
+  color: #fff;
   text-shadow:
-    0 0 5px #fff,
-    0 0 15px #fff,
-    0 0 30px #ff00ff,
-    0 0 60px #ff00ff,
-    0 0 90px #ff00ff,
-    0 0 120px #ff00ff;
+    0 0 8px   #fff,
+    0 0 20px  #fff,
+    0 0 40px  #ff00ff,
+    0 0 80px  #ff00ff,
+    0 0 120px #ff00ff,
+    0 0 160px #ff00ff;
   mix-blend-mode: screen;
   transform: translateY(10px) skewX(-5deg);
 }
