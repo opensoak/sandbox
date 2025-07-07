@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  background: #4ce0c1;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: 200;
+  margin-top: 0.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
