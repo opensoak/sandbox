@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  background: #4ce0c1;
-  color: white;
+  background: #96e0cb;
+  color: #ffffff;
   font-family: 'Outfit', sans-serif;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,14 +18,15 @@ main {
 
 h1 {
   font-size: 3em;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
+  text-transform: lowercase;
 }
 
 p {
   font-size: 1.2em;
   font-weight: 200;
   margin-top: 0.5em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-transform: lowercase;
 }
